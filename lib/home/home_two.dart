@@ -1,5 +1,3 @@
-// ignore_for_file: dead_code
-
 import 'package:flutter/material.dart';
 
 class SecPage extends StatefulWidget {
@@ -13,7 +11,7 @@ class _SecPageState extends State<SecPage> {
   PageController pageController = PageController(viewportFraction: 0.85);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 320,
         child: PageView.builder(
           controller: pageController,
@@ -45,7 +43,7 @@ class _SecPageState extends State<SecPage> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(0, 3),
+                          offset: const Offset(0, 3),
                         )
                       ]),
                   child: Container(
@@ -68,14 +66,36 @@ class _SecPageState extends State<SecPage> {
                           Wrap(
                             children: List.generate(
                                 5,
-                                (index) => Icon(
+                                (index) => const Icon(
                                       Icons.star,
                                       color: Colors.blue,
                                       size: 17,
                                     )),
+                          ),
+                          Padding(padding: EdgeInsets.only(right: 60)),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                "2530 ",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              Text(
+                                "comments ",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                            ],
                           )
                         ],
-                      )
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text("RS 560",
+                          style: TextStyle(
+                              color: Colors.black87,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700))
                     ]),
                   ),
                 ),
@@ -84,6 +104,5 @@ class _SecPageState extends State<SecPage> {
           },
           itemCount: 5,
         ));
-  
   }
 }
