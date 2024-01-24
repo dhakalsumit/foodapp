@@ -9,6 +9,13 @@ class SecPage extends StatefulWidget {
 
 class _SecPageState extends State<SecPage> {
   PageController pageController = PageController(viewportFraction: 0.85);
+  final List<String> imageUrls = [
+    "images/food1.jpg",
+    "images/food2.jpg",
+    "images/food3.jpg",
+    "images/food4.jpg",
+    "images/food5.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,8 +30,8 @@ class _SecPageState extends State<SecPage> {
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
-                    image: const DecorationImage(
-                      image: AssetImage("images/food3.jpg"),
+                    image: DecorationImage(
+                      image: AssetImage(imageUrls[position]),
                       fit: BoxFit.cover,
                     )),
               ),

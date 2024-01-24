@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/home/class_widget.dart';
-import 'package:foodapp/home/custom_scroll_view_demo.dart';
 
 import 'package:foodapp/home/home_two.dart';
 
@@ -41,13 +39,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (_) => ClassWidget(
-                              roll: 12,
-                              name: "sachin ",
-                            )));
-                  },
                   child: Container(
                     height: 50,
                     width: 50,
