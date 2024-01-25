@@ -16,6 +16,7 @@ class _SecPageState extends State<SecPage> {
     "images/food4.jpg",
     "images/food5.jpg",
   ];
+ 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -79,7 +80,7 @@ class _SecPageState extends State<SecPage> {
                                       size: 17,
                                     )),
                           ),
-                          Padding(padding: EdgeInsets.only(right: 60)),
+                         const Padding(padding: EdgeInsets.only(right: 60)),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [

@@ -10,6 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<String> imageUrls = [
+    "images/food1.jpg",
+    "images/food2.jpg",
+    "images/food3.jpg",
+    "images/food4.jpg",
+    "images/food5.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +63,15 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SecPage(),
+          const Column(
+            children: [
+              Text(
+                'Popular Products',
+                style: TextStyle(
+                    fontSize: 20, height: 2, fontStyle: FontStyle.italic),
+              )
+            ],
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -65,13 +81,51 @@ class _HomePageState extends State<HomePage> {
               physics: const AlwaysScrollableScrollPhysics(),
               itemCount: 5,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.red,
-                  padding: const EdgeInsets.only(top: 30),
-                  margin: const EdgeInsets.only(top: 30),
-                );
+                return Stack(children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    padding: const EdgeInsets.only(top: 30),
+                    margin:
+                        const EdgeInsets.only(top: 30, left: 10, right: 200),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        image: AssetImage(imageUrls[index]),
+                        fit: BoxFit.cover,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 160,
+                    width: 200,
+                    padding: const EdgeInsets.only(top: 60),
+                    margin:
+                        const EdgeInsets.only(top: 60, left: 200, right: 20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset:const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                  )
+                ]);
               },
             ),
           )
