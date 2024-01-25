@@ -107,11 +107,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 160,
+                    height: 190,
                     width: 200,
                     padding: const EdgeInsets.only(top: 60),
                     margin:
-                        const EdgeInsets.only(top: 60, left: 200, right: 20),
+                        const EdgeInsets.only(top: 35g, left: 200, right: 20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -120,7 +120,8 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset:const Offset(0, 3), // changes position of shadow
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
                         ),
                       ],
                     ),
