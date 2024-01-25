@@ -16,7 +16,15 @@ class _SecPageState extends State<SecPage> {
     "images/food4.jpg",
     "images/food5.jpg",
   ];
- 
+  final List<String> dataList = [
+    'Ice cream',
+    'Golo Golo Dalla ',
+    'Burger',
+    'Momo',
+    'fish curry',
+    // Add more items as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -58,9 +66,9 @@ class _SecPageState extends State<SecPage> {
                     padding: const EdgeInsets.only(top: 10),
                     margin: const EdgeInsets.only(left: 20),
                     child: Column(children: [
-                      const Text(
-                        "Burger",
-                        style: TextStyle(
+                      Text(
+                        dataList[position],
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
@@ -80,7 +88,7 @@ class _SecPageState extends State<SecPage> {
                                       size: 17,
                                     )),
                           ),
-                         const Padding(padding: EdgeInsets.only(right: 60)),
+                          const Padding(padding: EdgeInsets.only(right: 60)),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [

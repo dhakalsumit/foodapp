@@ -17,6 +17,14 @@ class _HomePageState extends State<HomePage> {
     "images/food4.jpg",
     "images/food5.jpg",
   ];
+  final List<String> dataList = [
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+    // Add more items as needed
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,25 +115,25 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 190,
-                    width: 200,
-                    padding: const EdgeInsets.only(top: 60),
-                    margin:
-                        const EdgeInsets.only(top: 35g, left: 200, right: 20),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset:
-                              const Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                  )
+                      height: 190,
+                      width: 200,
+                      padding: const EdgeInsets.only(top: 60),
+                      margin:
+                          const EdgeInsets.only(top: 35, left: 200, right: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Text(dataList[index]))
                 ]);
               },
             ),
