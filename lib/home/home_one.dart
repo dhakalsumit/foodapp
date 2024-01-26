@@ -18,11 +18,11 @@ class _HomePageState extends State<HomePage> {
     "images/food5.jpg",
   ];
   final List<String> dataList = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
+    'Ice cream',
+    'Golo Golo Dalla ',
+    'Burger',
+    'Momo',
+    'fish curry',
     // Add more items as needed
   ];
   @override
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                       height: 190,
                       width: 200,
-                      padding: const EdgeInsets.only(top: 60),
+                      padding: const EdgeInsets.only(top: 20),
                       margin:
                           const EdgeInsets.only(top: 35, left: 200, right: 20),
                       decoration: BoxDecoration(
@@ -133,11 +133,27 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      child: Text(dataList[index]))
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          top: 1,
+                          left: 40,
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              dataList[index],
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ))
                 ]);
               },
             ),
-          )
+          ),
         ],
       ),
     );
