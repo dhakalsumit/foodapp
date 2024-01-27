@@ -147,6 +147,15 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold),
                             ),
+                            const Text(
+                              " Rs 160",
+                              style: TextStyle(
+                                height: 3,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black54,
+                              ),
+                            )
                           ],
                         ),
                       ))
