@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
     'Burger',
     'Momo',
     'fish curry',
+    'pineapple'
     // Add more items as needed
   ];
   @override
